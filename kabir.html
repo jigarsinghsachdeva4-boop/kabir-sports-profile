@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<title>KABIR | Sports Champion</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--bg:#080b12;--card:#111722;--gold:#e9b949;--white:#f6f7fb;--muted:#aab2c2}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--white)}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#080b12ed;border-bottom:1px solid #ffffff12;gap:15px}
+.logo{font-weight:900;letter-spacing:2px;font-size:22px}
+.logo span,footer span{color:var(--gold)}
+nav a{color:#d6d9e0;text-decoration:none;font-size:13px;margin-left:15px}
+nav a:hover{color:var(--gold)}
+.hero{min-height:590px;display:flex;align-items:center;padding:85px 9%;background:linear-gradient(90deg,#080b12 5%,#080b12df 48%,#080b1240),url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1800&q=85') center/cover}
+.eyebrow,.kicker{color:var(--gold);font-size:12px;letter-spacing:4px;font-weight:bold}
+h1{font-size:clamp(65px,12vw,125px);line-height:.95;letter-spacing:-5px;margin:22px 0}
+h1 span{color:var(--gold)}
+.hero p{color:#d0d4dd;line-height:1.8;max-width:460px}
+.btn{display:inline-block;margin-top:28px;background:var(--gold);color:#080b12;padding:14px 23px;text-decoration:none;font-size:12px;font-weight:bold;letter-spacing:1px;border-radius:4px}
+section{padding:85px 9%;scroll-margin-top:70px}
+h2{font-size:clamp(30px,5vw,46px);margin:13px 0 35px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--card);padding:26px;border:1px solid #ffffff10;border-radius:9px;transition:.25s}
+.card:hover,.sport:hover,.skill:hover{transform:translateY(-5px);border-color:#e9b94966}
+.label{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:10px}
+.value{font-size:21px;font-weight:bold}
+.gold{color:var(--gold)}
+.skills{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.skill{text-align:center;padding:24px 10px;background:var(--card);border-radius:8px;border:1px solid #ffffff10;transition:.25s}
+.emoji{font-size:30px;margin-bottom:15px}
+.skill h3{font-size:14px}
+.skill p{font-size:11px;color:var(--muted);margin-top:8px}
+.achievement{display:flex;align-items:center;gap:22px;background:linear-gradient(120deg,#211c10,#111722 75%);padding:28px;border:1px solid #e9b94940;border-radius:10px;min-height:175px;transition:.25s}
+.trophy{font-size:55px}
+.count{font-size:48px;font-weight:900;color:var(--gold);margin-bottom:5px}
+.achievement h3{font-size:20px;line-height:1.4}
+.achievement p{font-size:12px;line-height:1.6}
+.story{font-size:19px;line-height:1.9;color:#d0d4dd;border-left:3px solid var(--gold);padding-left:23px;max-width:750px}
+.sports{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sport{min-height:190px;padding:28px;border-radius:10px;background:linear-gradient(140deg,#1c2534,#111722);border:1px solid #ffffff12;transition:.25s}
+.sport span{font-size:35px}
+.sport h3{font-size:23px;margin:18px 0 8px}
+.sport p{color:var(--muted);font-size:14px;line-height:1.7}
+footer{text-align:center;padding:38px 15px;border-top:1px solid #ffffff12}
+footer h2{font-size:24px;margin:0 0 12px}
+footer p{font-size:12px;color:var(--muted);line-height:2}
+@media(max-width:650px){
+ nav{padding:15px 5%;align-items:flex-start;flex-direction:column;gap:14px}
+ nav div:last-child{display:flex;gap:13px;flex-wrap:wrap}
+ nav a{margin:0;font-size:12px}
+ .hero{min-height:490px;padding:70px 7%;background-position:58% center}
+ h1{letter-spacing:-3px}
+ section{padding:65px 7%}
+ .grid,.sports{grid-template-columns:1fr;gap:12px}
+ .card{padding:20px}
+ .value{font-size:18px}
+ .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .achievement{gap:15px;padding:20px;min-height:145px}
+ .trophy{font-size:42px}
+ .count{font-size:40px}
+ .achievement h3{font-size:18px}
+ .story{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">KABIR<span>.</span></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#journey">Journey</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div>
+    <div class="eyebrow">SPORTS CHAMPION • 2026</div>
+    <h1>KABIR<span>.</span></h1>
+    <div class="eyebrow">DREAM • PLAY • ACHIEVE</div>
+    <p style="margin-top:22px">
+      A young athlete passionate about cricket and table tennis.
+      Every match is a new opportunity to grow.
+    </p>
+    <a href="#profile" class="btn">EXPLORE MY PROFILE ↗</a>
+  </div>
+</header>
+
+<section id="profile">
+  <div class="kicker">PLAYER PROFILE</div>
+  <h2>ABOUT KABIR</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="label">PLAYER NAME</div>
+      <div class="value">Kabir</div>
+    </div>
+    <div class="card">
+      <div class="label">AGE</div>
+      <div class="value">13 Years</div>
+    </div>
+    <div class="card">
+      <div class="label">OCCUPATION</div>
+      <div class="value">Student</div>
+    </div>
+    <div class="card">
+      <div class="label">SPORTS</div>
+      <div class="value">Cricket & Table Tennis</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="kicker">PLAYER ABILITIES</div>
+  <h2>SPORTS SKILLS</h2>
+  <div class="skills">
+    <div class="skill">
+      <div class="emoji">🏏</div>
+      <h3>Batting</h3>
+      <p>Cricket</p>
+    </div>
+    <div class="skill">
+      <div class="emoji">🎯</div>
+      <h3>Bowling</h3>
+      <p>Cricket</p>
+    </div>
+    <div class="skill">
+      <div class="emoji">⚡</div>
+      <h3>Reflexes</h3>
+      <p>Table Tennis</p>
+    </div>
+    <div class="skill">
+      <div class="emoji">🏓</div>
+      <h3>Rally Control</h3>
+      <p>Table Tennis</p>
+    </div>
+    <div class="skill">
+      <div class="emoji">💪</div>
+      <h3>Discipline</h3>
+      <p>Every Day</p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="kicker">PROUD MOMENTS</div>
+  <h2>ACHIEVEMENTS</h2>
+  <div class="grid">
+    <div class="achievement">
+      <div class="trophy">🏆</div>
+      <div>
+        <div class="count">05</div>
+        <h3>CHAMPIONSHIP TROPHIES</h3>
+        <p style="color:var(--muted);margin-top:9px">
+          Dedication • Hard Work • Success
+        </p>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="trophy">🥇</div>
+      <div>
+        <div class="kicker">ELITE ACHIEVEMENT</div>
+        <h3 style="margin-top:12px">STATE CHAMPION</h3>
+        <p style="color:var(--muted);margin-top:9px">
+          Compete with passion. Play to win.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="kicker">MY STORY</div>
+  <h2>SPORTS JOURNEY</h2>
+  <p class="story">
+    I am Kabir, a student who loves cricket and table tennis.
+    Sports inspire me to stay focused, learn new skills and
+    challenge myself. My goal is to keep improving, respect
+    my teammates and make every opportunity count.
+  </p>
+</section>
+
+<section id="sports">
+  <div class="kicker">MY FAVOURITE</div>
+  <h2>SPORTS I PLAY</h2>
+  <div class="sports">
+    <div class="sport">
+      <span>🏏</span>
+      <h3>CRICKET</h3>
+      <p>Passion, teamwork and the spirit of the game.</p>
+    </div>
+    <div class="sport">
+      <span>🏓</span>
+      <h3>TABLE TENNIS</h3>
+      <p>Speed, focus and quick reactions.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>KABIR<span>.</span></h2>
+  <p>DREAM BIG • WORK HARD • NEVER GIVE UP</p>
+  <p>STUDENT · ATHLETE · CHAMPION</p>
+  <p>© 2026 KABIR SPORTS PROFILE</p>
+</footer>
+
+</body>
+</html>
